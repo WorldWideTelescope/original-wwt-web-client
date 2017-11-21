@@ -1145,11 +1145,11 @@
       <button aria-hidden="true" class="close pull-right" type="button" ng-click="toggleLayerManager()">x</button>
       <h5 localize="Layers"></h5>
        <div class="tree" ng-style="{height:  layerManagerHeight() + 'px' }">
-         <div
+         <!--<div
             ng-class="sunTree.Sun.collapsed ? 'collapsed' : ''"
             ng-repeat="(name,node) in sunTree"
             ng-include="'tree-node'">
-           </div>
+           </div>-->
           <div
             ng-class="tree.collapsed ? 'collapsed' : ''"
             ng-repeat="node in [tree]"

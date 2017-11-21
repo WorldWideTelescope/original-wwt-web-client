@@ -316,7 +316,7 @@ wwt.controllers.controller('MainController',
                   $timeout(function () {
                     changePanel('Search');
                   });
-                }],
+                }]/*,
                 'VO Cone Search': [function () {
                   var coneSearchModal = $modal({
                     scope: $scope,
@@ -326,7 +326,7 @@ wwt.controllers.controller('MainController',
                     placement: 'center',
                     backdrop: 'static'
                   });
-                }]
+                }]*/
               }
             },
             {
