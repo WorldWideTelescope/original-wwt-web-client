@@ -222,11 +222,13 @@ namespace wwtlib
 
         public void LoadFits(string url)
         {
-            FitsImage img = new FitsImage(url, OnWcsLoad);
+            FitsImage img = new FitsImage(url, null, OnWcsLoad);
         }
 
         private void OnWcsLoad(WcsImage wcsImage)
         {
+            int width = (int)wcsImage.SizeX;
+            int height = (int)wcsImage.SizeY;
 
             WWTControl.Singleton.RenderContext.ForegroundImageset = Imageset.Create(
                         wcsImage.Description,
@@ -260,7 +262,7 @@ namespace wwtlib
                         ""
                         );
             WWTControl.Singleton.RenderContext.ForegroundImageset.WcsImage = wcsImage;
-          
+            WWTControl.Singleton.RenderContext.ViewCamera.Opacity = 100;
         }
 
         public bool hideTourFeedback = false;
